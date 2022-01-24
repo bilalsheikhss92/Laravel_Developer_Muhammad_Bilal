@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "322b321a-a068-46e5-acdb-9107cd4c2bc7",
+		"name": "testProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_name",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/testProject/public/api/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"testProject",
+						"public",
+						"api",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_name",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}admin/logout",
+					"host": [
+						"{{baseUrl}}admin"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Invitation Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "17237009@gift.edu.pk",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/testProject/public/api/admin/send/mail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"testProject",
+						"public",
+						"api",
+						"admin",
+						"send",
+						"mail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Account Verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "17237009@gift.edu.pk",
+							"type": "default"
+						},
+						{
+							"key": "code",
+							"value": "316896",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}user/verify",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_name",
+							"value": "testUser",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12341234",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}user/login",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chnage Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "current_password",
+							"value": "12345678",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12341234",
+							"type": "default"
+						},
+						{
+							"key": "password_confirm",
+							"value": "12344321",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}user/change/password",
+					"host": [
+						"{{baseUrl}}user"
+					],
+					"path": [
+						"change",
+						"password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
